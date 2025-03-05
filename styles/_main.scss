@@ -1,0 +1,119 @@
+$main-txt-font-family: "Mulish", serif;
+$main-txt-color: #111111;
+
+// main {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: flex-end;
+//     width: 100%;
+//     padding: 20px; // Adjust padding as needed
+
+//     // Title styles
+//     &__title {
+//         padding-top: 99px;
+//         max-width: 60%; // Adjust for desired title width
+//         font-size: 2rem; 
+//         line-height: 1.5; // Control the spacing between lines
+
+//         // Hover effect for title
+//         &:hover {
+//             color: rgb(122, 122, 225); // Change color on hover
+//             cursor: pointer; // Change cursor on hover
+//         }
+//     }
+
+//     // Quote styles
+//     &__quote {
+//         max-width: 30%; // Adjust for desired quote width
+//         font-size: 1.5rem; 
+//         margin-left: 20px; // Space between the title and quote
+//         align-self: flex-end; // Align it to the bottom
+//         text-align: right; // Align text to the right
+
+//         // State for the quote
+//         &.active {
+//             font-weight: bold;
+//             color: gray; // Change color when active
+//         }
+
+//         // Hover effect for the quote
+//         &:hover {
+//             text-decoration: underline; // Underline on hover
+//         }
+//     }
+// }
+
+
+
+main {display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+
+    .main-header {
+        width: 90%;
+        margin-top: 40px;
+        display: flex;                    // Use flexbox layout
+        justify-content: space-between;   // Space out the title and quote
+        align-items: flex-end;            // Align items to the bottom of the flex container
+        margin-bottom: 60px;              // Add some spacing below the header
+
+        .main-title {
+            font-size: 40px;               // Set a font size for the title
+            line-height: 1.5;              // Line height for the title
+            margin: 0;                     // Remove default margin
+            max-width: 70%;                // Optional: Set a max width for title to keep it aligned well
+        }
+
+        .main-quote {
+            max-width: 30%;
+            font-size: 18px;             // Set a font size for the quote
+            margin-left: 20px;             // Optional: Space between title and quote
+            align-self: flex-end;          // Align the quote to the bottom of the flex container
+        }
+    }
+    .grid-container {
+        min-height: 1960px;
+        display: grid;                          // Use CSS Grid layout
+        grid-template-columns: repeat(9, 1fr); // 9 equal columns
+        grid-template-rows: repeat(32, 1fr);  // 32 rows with auto height to fit content
+        grid-gap: 20px;                        // 20px gap between all grid items
+        margin-top: 60px;                      // Optional margin above the grid
+    }
+    .pic1 { grid-column: 1 / 4; grid-row: 1 / 8;
+        background-color: #007F5F;
+}
+.pic2 { grid-column: 4 / 7; grid-row: 1 / 7; 
+       background-color: #80B918;
+}
+.pic3 { grid-column: 7 / 10; grid-row: 1 / 11;
+       background-color: #DDDF00 
+}
+
+.pic4 { grid-column: 1 / 4; grid-row: 8 / 16;
+        background-color: #2B9348; 
+}
+.pic5 { grid-column: 4 / 7; grid-row: 7 / 14;
+       background-color: #EEEF20;
+}
+.pic6 { grid-column: 7 / 10; grid-row: 11 / 18;
+       background-color: #EEEF20;
+}
+.pic7 { grid-column: 1 / 4; grid-row: 16 / 24;
+       background-color: #55A630;
+}
+.pic8 { grid-column: 4 / 7; grid-row: 14 / 23;
+       background-color: #AC0;
+}
+.pic9 { grid-column: 7 / 10; grid-row: 18 / 27;
+      background-color: #BFD200;
+}
+.pic10 { grid-column: 1 / 4; grid-row: 24 / 33;
+      background-color: #D4D700;
+}
+.pic11 {grid-column: 4 / 7; grid-row: 23 / 33;
+       background-color: #007F5F;
+}
+.pic12 {grid-column: 7 / 10; grid-row: 27 / 33;
+    background-color: #007F5F;
+}
+}

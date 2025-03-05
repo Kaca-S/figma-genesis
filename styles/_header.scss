@@ -1,0 +1,73 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 23px;
+    padding: 0 10px; // add some horizontal padding
+   margin-bottom: 60px;
+
+    .logo {
+        font-size: 16px; // example font size
+        font-weight: bold;
+    }
+    nav {
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                margin-left: 15px; // space between nav items
+
+                a {
+                    text-decoration: none;
+                    color: #9b198c; // example link color
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: #007BFF; // hover effect
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// header {
+//     width: 100vw;
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     display: inline-block;
+//     justify-content: space-between; // Space between logo and nav
+//     align-items: center; // Vertically align items
+//     height: 23px;
+//     padding: 0 10px; /* add some horizontal padding */
+
+// }
+// .logo {
+//     padding-left: 125px;
+//     padding-top: 60px;
+//     font-size: 16px; /* example font size */
+//     font-weight: bold;
+// }
+// nav {
+//     display: flex;
+//     list-style: none;
+//     margin: 0;
+//     flex-direction: row;
+// }
+// ul {
+// padding-top: 60px;
+// margin-right: 120px;
+// margin-left: 20px; /* space between nav items */
+// flex-direction: row;
+// list-style: none;
+// color: aqua;
+// }
+// li {
+//     color: aqua;
+//     text-decoration: none;
+// }
