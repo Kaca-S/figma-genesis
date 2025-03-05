@@ -51,7 +51,7 @@ main {display: flex;
 
     .main-header {
         width: 90%;
-        margin-top: 40px;
+        margin: 50px;
         display: flex;                    // Use flexbox layout
         justify-content: space-between;   // Space out the title and quote
         align-items: flex-end;            // Align items to the bottom of the flex container
@@ -61,7 +61,7 @@ main {display: flex;
             font-size: 40px;               // Set a font size for the title
             line-height: 1.5;              // Line height for the title
             margin: 0;                     // Remove default margin
-            max-width: 70%;                // Optional: Set a max width for title to keep it aligned well
+            max-width: 60%;                // Optional: Set a max width for title to keep it aligned well
         }
 
         .main-quote {
@@ -73,7 +73,8 @@ main {display: flex;
     }
     .grid-container {
         min-height: 1960px;
-        display: grid;                          // Use CSS Grid layout
+        display: grid;   
+        margin: 50px;                       // Use CSS Grid layout
         grid-template-columns: repeat(9, 1fr); // 9 equal columns
         grid-template-rows: repeat(32, 1fr);  // 32 rows with auto height to fit content
         grid-gap: 20px;                        // 20px gap between all grid items
