@@ -1,57 +1,12 @@
 $main-txt-font-family: "Mulish", serif;
 $main-txt-color: #111111;
 
-// main {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: flex-end;
-//     width: 100%;
-//     padding: 20px; // Adjust padding as needed
-
-//     // Title styles
-//     &__title {
-//         padding-top: 99px;
-//         max-width: 60%; // Adjust for desired title width
-//         font-size: 2rem; 
-//         line-height: 1.5; // Control the spacing between lines
-
-//         // Hover effect for title
-//         &:hover {
-//             color: rgb(122, 122, 225); // Change color on hover
-//             cursor: pointer; // Change cursor on hover
-//         }
-//     }
-
-//     // Quote styles
-//     &__quote {
-//         max-width: 30%; // Adjust for desired quote width
-//         font-size: 1.5rem; 
-//         margin-left: 20px; // Space between the title and quote
-//         align-self: flex-end; // Align it to the bottom
-//         text-align: right; // Align text to the right
-
-//         // State for the quote
-//         &.active {
-//             font-weight: bold;
-//             color: gray; // Change color when active
-//         }
-
-//         // Hover effect for the quote
-//         &:hover {
-//             text-decoration: underline; // Underline on hover
-//         }
-//     }
-// }
-
-
-
 main {display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin: 50px;
 
     .main-header {
         width: 90%;
-        margin: 50px;
         display: flex;                    // Use flexbox layout
         justify-content: space-between;   // Space out the title and quote
         align-items: flex-end;            // Align items to the bottom of the flex container
@@ -72,9 +27,10 @@ main {display: flex;
         }
     }
     .grid-container {
+        max-width: 100%;
         min-height: 1960px;
         display: grid;   
-        margin: 50px;                       // Use CSS Grid layout
+                              // Use CSS Grid layout
         grid-template-columns: repeat(9, 1fr); // 9 equal columns
         grid-template-rows: repeat(32, 1fr);  // 32 rows with auto height to fit content
         grid-gap: 20px;                        // 20px gap between all grid items
@@ -89,7 +45,6 @@ main {display: flex;
 .pic3 { grid-column: 7 / 10; grid-row: 1 / 11;
        background-color: #DDDF00 
 }
-
 .pic4 { grid-column: 1 / 4; grid-row: 8 / 16;
         background-color: #2B9348; 
 }
@@ -117,4 +72,107 @@ main {display: flex;
 .pic12 {grid-column: 7 / 10; grid-row: 27 / 33;
     background-color: #007F5F;
 }
+}
+
+$margin-bottom: 10px; // Set a variable for column margin
+$column-spacing: 50px; // Set a variable for spacing between columns
+
+.container {
+    max-width: 100%;
+    // max-width: $max-width; // Use max width variable
+
+    padding: 20px; // Add padding
+}
+
+.group-container {
+    display: flex; // Use flexbox for layout
+    align-items: flex-start; // Align items to the start
+    justify-content: space-between;
+.heading {
+        flex: 1; // Allow heading to take up available space
+        margin-right: 40px; // Space between heading and columns
+        max-width: 50%;
+        flex-grow: 1;
+    }
+    .columns {
+        display: flex; // Use flexbox for columns
+        flex-direction: row; // Stack columns vertically
+     
+        .column {
+            
+            margin-bottom: $margin-bottom; // Use margin variable for spacing
+            margin-right: $column-spacing; // Set a variable for spacing between columns
+        }
+    }
+}
+
+
+.table-container {
+    max-width: 100%;
+    min-height: 823px;
+    display: grid;   
+    grid-template-columns: repeat(5, 1fr); // 9 equal columns
+    grid-template-rows: repeat(4, 1fr);  // 32 rows with auto height to fit content
+    grid-gap: 20px;                        // 20px gap between all grid items
+    margin-top: 60px;                      // Optional margin above the grid
+    border-top: 2px solid #000;            // Top border
+    border-bottom: 2px solid #000;         // Bottom border
+    position: relative;
+}
+
+.table-container::before {
+    content: '';
+    position: absolute; 
+    top: calc((100% / 4) * 2); // Calculate position to be on top of the 3rd row (index 2)
+    // The top: calc((100% / 4) * 2); calculation places the border line right above the third row.
+    //Since there are 4 rows, each row occupies 100% / 4 of the height, and the third row starts after two rows.
+    left: 0;
+    right: 0; 
+    height: 2px; // Height of the border
+    background-color: #000; // Color of the border
+}
+.table-item {
+    padding: 20px; // Add padding for the text
+    display: flex; // To center text if you want
+    flex-direction: column;
+    align-items: flex-start; // Align text to the top
+    justify-content: flex-start; // Align text to the left
+}
+.four, .seven, .eleven, .fourteen{
+    align-items: flex-end;
+    text-align: right; // Ensure text is aligned to the right
+}
+.title {
+    font-size: 16px; /* Size of the title */
+    font-weight: 400; /* Make it bold */
+    display: block; /* Forces the span to take the whole line */
+    margin-bottom: 10px; /* Space between title and description */
+}
+.one { grid-column: 1 / 3; grid-row: 1 / 3;
+}
+.two { grid-column: 3 / 4; grid-row: 1 / 2;  
+}
+.three { grid-column: 4 / 5; grid-row: 1 / 2;
+}
+.four { grid-column: 5 / 6; grid-row: 1 / 2; 
+}
+.five { grid-column: 3 / 4; grid-row: 2 / 3;  
+}
+.six { grid-column: 4 / 5; grid-row: 2 / 3;  
+}
+.seven { grid-column: 5 / 6; grid-row: 2 / 3; 
+}
+.eight { grid-column: 1 / 3; grid-row: 3 / 5;  
+}
+.nine { grid-column: 3 / 4; grid-row: 3 / 4; 
+}
+.ten { grid-column: 4 / 5; grid-row: 3 / 4;
+}
+.eleven {grid-column: 5 / 6; grid-row: 3 / 4;
+}
+.twelve {grid-column: 3 / 4; grid-row: 4 / 5;
+}
+.thirteen {grid-column: 4 / 5; grid-row: 4 / 5;
+}
+.fourteen {grid-column: 5 / 6; grid-row: 4 / 5; 
 }
