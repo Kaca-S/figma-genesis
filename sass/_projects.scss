@@ -84,3 +84,20 @@
   }
 }
 
+@media (max-width: 768px) {
+  .project-gallery {
+    .image-row {
+      flex-direction: column;
+      gap: 20px;
+
+      img {
+        width: 100%; // Full width for each image
+      }
+    }
+
+    .project-caption {
+      font-size: 15px;
+      padding: 0 10px;
+    }
+  }
+}
