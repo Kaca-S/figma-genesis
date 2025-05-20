@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  justify-content: space-between; // logo left, nav right
+  align-items: center;
+  height: 23px;
+  margin: 50px;
+  margin-bottom: 60px;
+
+  .logo {
+    font-size: $logo-font-size;
+    font-weight: bold;
+    color: $color-primary;
+    text-decoration: none; // ensure no underline if logo is a link
+  }
+
+  nav {
+    ul {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $color-primary;
+          font-size: $nav-link-font-size;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: -0.346px;
+          transition: color 0.3s;
+
+          &:hover {
+            color: $color-hover-link;
+          }
+        }
+      }
+    }
+  }
+}

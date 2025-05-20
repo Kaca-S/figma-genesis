@@ -1,12 +1,14 @@
-@import './header';
 
-@import './main';
-@import './footer';
+@import '../sass/variables';
+@import '../sass/header';
+@import '../sass/footer';
+@import '../sass/layoutHome';
 
 body {
-    width: 100%;
+    min-height: 100vh;
+     max-width: 100vw;
     margin: auto;
     padding: 0;
-    $main-txt-font-family: "Mulish", serif;
-    $main-txt-color: #111111;
+    font-family: $main-font-family;  // Use variable from _variables.scss
+   color: $main-text-color;
 }
