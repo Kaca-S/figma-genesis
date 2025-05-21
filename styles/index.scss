@@ -4,6 +4,7 @@
 @import '../sass/footer';
 @import '../sass/layoutHome';
 @import '../sass/projects';
+@import '../sass/contact';
 
 body {
     min-height: 100vh;
@@ -13,3 +14,4 @@ body {
     font-family: $main-font-family;  // Use variable from _variables.scss
    color: $main-text-color;
 }
+

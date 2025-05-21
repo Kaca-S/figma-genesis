@@ -1,50 +1,74 @@
 .projects-page {
   margin: 50px;
 
-  .project-intro {
-    display: flex;
-    width: 100%;         // ✅ Take full width of container
-    max-width: 100%; 
-    align-items: flex-start;
-    gap: 80px;
-
-    .intro-text {
-      width: 40%;
-
-      .page-title {
-        font-size: 36px;
-        font-weight: 800;
-        margin-bottom: 20px;
-        font-family: "Mulish", sans-serif;
-        color: $color-primary;
-      }
-
-      .page-description {
-        font-size: 18px;
-        line-height: 1.6;
-        font-family: "Mulish", sans-serif;
-        color: $color-primary;
-      }
-    }
-
-    .project-keywords {
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(6, auto);
-    gap: 10px 40px;
-    font-family: "Mulish", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: $color-primary;
-    margin-left: auto;
-     .word {
-        padding: 5px 0;
-      }
-    }
-  }
+ .project-intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;       // ✅ ensure children can stretch
+  gap: 80px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+ }
+ .intro-text {
+  flex: 0 0 45%; // ✅ fixed 35% width
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ }
+ .page-title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-family: $main-font-family;
+  color: $color-primary;
+ }
+ .page-description {
+  font-size: $nav-link-font-size;
+  line-height: 1.6;
+  font-family: $main-font-family;
+  color: $color-primary;
+ }
 }
+.project-keywords {
+  flex: 0 0 35%; // ✅ gives it more room to breathe
+  max-width: 40%;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 10px $column-spacing;
+  font-family: $main-font-family;
+  font-weight: 600;
+  font-size: 16px;
+  color: $color-primary;
+  align-self: stretch;
+ .word {
+    display: flex;
+    align-items: center;
+ }
+}
+.project-keywords {
+  flex: 1;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;        // ✅ evenly distributes height
+  height: auto;               // ✅ allow natural height based on parent
+  align-self: stretch;        // ✅ fill the flex container height
+  font-family: $main-font-family;
+  font-weight: 600;
+  font-size: 16px;
+  color: $color-primary;
+  gap: 10px $column-spacing;
 
+ .word {
+    display: flex;
+    align-items: center;
+ }
+}
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -65,16 +89,14 @@
   .project-text {
     margin-top: 20px;
     font-size: 16px;
-    font-family: "Mulish", sans-serif;
+    font-family: $main-font-family;
     color: $color-primary;
     text-align:start;
   }
-
   .image-row {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-
     img {
       width: 32%;
       height: auto;
@@ -89,15 +111,17 @@
     .image-row {
       flex-direction: column;
       gap: 20px;
-
       img {
-        width: 100%; // Full width for each image
+        width: 100%;
       }
     }
-
     .project-caption {
       font-size: 15px;
       padding: 0 10px;
     }
+  }
+  .intro-text, .project-keywords {
+    max-width: 100%;
+    margin-left: 0;
   }
 }

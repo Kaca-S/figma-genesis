@@ -1,8 +1,4 @@
-$color-primary: #111111;
-$color-hover-link: #007BFF;
-$color-hover-icon: #0bde6a;
-$logo-font-size: 24px;
-$nav-link-font-size: 18px;
+
 
 footer {
   color: $color-primary;
@@ -13,31 +9,36 @@ footer {
 
   .footer-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 40px;
   }
 
   .logo {
+    text-decoration: none;
+    color: $color-primary;
     font-size: $logo-font-size;
     font-weight: bold;
+    font-family: $main-font-family;
+    &:hover {
+      color: $color-hover-link;
+    }
   }
-
   nav {
-    margin-left: auto;
-
+    margin-left: auto; 
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
 
       li {
-        display: inline;
-        margin: 0;
-        padding: 0;
-
         a {
-          margin: 0 15px;
           color: $color-primary;
           font-size: $nav-link-font-size;
           text-decoration: none;
@@ -57,11 +58,10 @@ footer {
 
   .social-icons {
     display: flex;
-    gap: 10px;
-    margin-left: 30px;
+    gap: 15px;
+    justify-content: center;
 
     i {
-      margin-left: 15px;
       font-size: $logo-font-size;
       color: $color-primary;
       cursor: pointer;
@@ -71,5 +71,10 @@ footer {
         color: $color-hover-icon;
       }
     }
+  }
+}
+@media (min-width: 769px) {
+  .social-icons {
+    margin-left: 60px;
   }
 }

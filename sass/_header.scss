@@ -1,21 +1,32 @@
 header {
   display: flex;
-  justify-content: space-between; // logo left, nav right
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   height: 23px;
   margin: 50px;
   margin-bottom: 60px;
+  padding: 20px;
 
   .logo {
-    font-size: $logo-font-size;
-    font-weight: bold;
-    color: $color-primary;
-    text-decoration: none; // ensure no underline if logo is a link
+  text-decoration: none;
+  color: $color-primary;
+  font-size: $logo-font-size;
+  font-weight: bold;
+  font-family: $main-font-family;
+    &:hover {
+      color: $color-hover-link;
+    }
   }
 
   nav {
+    flex: 1;                    
+    display: flex;
+    justify-content: flex-end;
     ul {
       display: flex;
+      flex-wrap: wrap;       
+      justify-content: flex-end;
       gap: 15px;
       list-style: none;
       padding: 0;
@@ -36,6 +47,26 @@ header {
             color: $color-hover-link;
           }
         }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+
+    .logo {
+      margin-bottom: 10px;
+    }
+
+    nav {
+      width: 100%;
+      ul {
+        justify-content: flex-start;
+        flex-direction: column;  // ✅ stack links vertically
+        gap: 10px;
       }
     }
   }

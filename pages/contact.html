@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="../styles/index.css" />
+  <link rel="stylesheet" href="../styles/normalize.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/42f85d5f96.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+  <header>
+   <a href="../index.html" class="logo">Genesis</a>
+    <nav>
+      <ul>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="contact-page">
+    <div class="wrapper contact-layout">
+      <div class="contact-text">
+        <h1 class="page-title">Full set of great features to make your product fresh</h1>
+        <p class="page-description">
+          Our favorite brands are our friends! We help them to achieve their goals, 
+          they help us to stay sharp.
+        </p>
+      </div>
+
+      <form class="contact-form">
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Message" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="map-image">
+      <img src="../images/map.png" alt="Map of the location" />
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="../index.html" class="logo">Genesis</a>
+      <nav class="nav">
+        <ul>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-icons">
+        <i class="fa-brands fa-dribbble"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
