@@ -4,7 +4,6 @@
   margin: 0 auto;
   padding: $base-padding
 }
-
 main {display: flex;
     flex-direction: column;
     margin: $section-margin;
@@ -14,7 +13,6 @@ main {display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 60px;
-
   .main-title {
     font-family: $main-font-family;
     color: $color-primary;
@@ -24,7 +22,6 @@ main {display: flex;
     margin: 0;
     max-width: 60%;
   }
-
   .main-quote {
     position: relative;
     max-width: 30%;
@@ -34,7 +31,6 @@ main {display: flex;
     align-self: flex-end;
     padding-top: 20px;
     opacity: 0.6;
-
     &::before {
       content: '';
       position: absolute;
@@ -46,7 +42,6 @@ main {display: flex;
     }
   }
 }
-
     .grid-container {
         max-width: 100%;
         min-height: 1960px;
@@ -93,7 +88,6 @@ main {display: flex;
     background-color: #007F5F;
 }
 }
-
 .container {
     max-width: 100%;
     padding: $base-padding;
@@ -161,7 +155,6 @@ main {display: flex;
 .two, .five, .nine, .twelve{
     font-size: 18px;
     font-weight: 700;
-
 }
 .title {
     font-size: 16px; 
@@ -197,6 +190,7 @@ main {display: flex;
 }
 .fourteen {grid-column: 5 / 6; grid-row: 4 / 5; 
 }
+
 @media (max-width: 768px) {
   .main-header {
     flex-direction: column;
