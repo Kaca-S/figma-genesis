@@ -25,7 +25,7 @@
   color: $color-primary;
  }
  .page-description {
-  font-size: $nav-link-font-size;
+  font-size: $text-font-size;
   line-height: 1.6;
   font-family: $main-font-family;
   color: $color-primary;
@@ -62,9 +62,12 @@
   font-size: 16px;
   color: $color-primary;
   gap: 10px $column-spacing;
- .word {
+ .word, .word-b{
     display: flex;
     align-items: center;
+ }
+ .word-b {
+  opacity: 0.6;
  }
 }
 .wrapper {
@@ -84,7 +87,7 @@
   }
   .project-text {
     margin-top: 20px;
-    font-size: 16px;
+    font-size: $text-font-size;
     font-family: $main-font-family;
     color: $color-primary;
     text-align:start;
